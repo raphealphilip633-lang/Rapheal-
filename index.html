@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapheal Yamnju | Computer Science & Graphic Designer</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Button style for About section */
+    .contact-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #111;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .contact-button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h2>Rapheal</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Rapheal Yamnju</h1>
+    <p>Computer Science Student | Graphic Designer</p>
+    <span>
+      Taraba State University, Jalingo <br>
+      <strong>Matric No:</strong> TSU/FSC/CS/24/1051
+    </span>
+  </header><!-- ABOUT -->
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    Hi, I'm <strong>Rapheal Yamnju</strong>, a 200L Computer Science student at 
+    <strong>Taraba State University</strong> with over one year of experience in 
+    graphic design. I create visually appealing and impactful designs that help 
+    businesses and individuals communicate their ideas effectively.
+    <br><br>
+    Graphic design is not just art—it's a tool that brings your vision to life. 
+    I am passionate about delivering creative solutions that leave a lasting impression. 
+    Feel free to contact me to bring your ideas into reality!
+  </p>
+  <!-- WhatsApp Contact Button -->
+  <a href="https://wa.me/2348088094035" class="contact-button" target="_blank">
+    Contact Me on WhatsApp
+  </a>
+</section>
+
+  <!
+    <a href="mailto:raphealphilip633@gmail.com" class="contact-button">Contact Me</a>
+  </section>
+
+  <!-- PORTFOLIO / SLIDER -->
+  <section id="portfolio" class="portfolio">
+    <h2>My Designs</h2>
+
+    <div class="slider">
+      <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+
+      <img src="images/design1.jpg" class="slide active">
+      <img src="images/design2.jpg" class="slide">
+      <img src="images/design3.jpg" class="slide">
+      <img src="images/design4.jpg" class="slide">
+      <img src="images/design5.jpg" class="slide">
+
+      <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact">
+    <h2>Let’s Connect</h2>
+
+    <div class="socials">
+      <a href="mailto:raphealphilip633@gmail.com" target="_blank">
+        <img src="images/gmail.png" alt="Gmail">
+      </a>
+      <a href="https://wa.me/234XXXXXXXXXX" target="_blank">
+        <img src="images/whatsapp.png" alt="WhatsApp">
+      </a>
+      <a href="https://instagram.com/raphaelphilip69" target="_blank">
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61581124496286" target="_blank">
+        <img src="images/facebook.png" alt="Facebook">
+      </a>
+    </div>
+
+    <p class="copy">
+      © 2026 Rapheal Yamnju • Computer Science • Graphic Designer
+    </p>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[index].classList.add("active");
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+  </script>
+
+</body>
+</html>

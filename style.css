@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+/* NAVBAR */
+nav {
+  background: #020617;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  color: #38bdf8;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #e5e7eb;
+}
+
+nav ul a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #38bdf8;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.hero span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ABOUT SECTION */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+section h2 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* SLIDER */
+.slider {
+  width: 90%;
+  max-width: 360px;
+  height: 360px;
+  margin: 30px auto;
+  position: relative;
+  background: #020617;
+  border-radius: 20px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* ARROW BUTTONS */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(56,189,248,0.8);
+  border: none;
+  color: #020617;
+  font-size: 22px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+/* FOOTER */
+footer {
+  background: #020617;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer h2 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+/* SOCIAL LOGOS */
+.socials {
+  display: flex;
+  justify-content: center;  /* center logos horizontally */
+  gap: 20px;               /* space between logos */
+  margin-bottom: 20px;
+}
+
+.socials a img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.socials a img:hover {
+  transform: scale(1.1);
+}
+
+.copy {
+  font-size: 13px;
+  opacity: 0.7;
+}
